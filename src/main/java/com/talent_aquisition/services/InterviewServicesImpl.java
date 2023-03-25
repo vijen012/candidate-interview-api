@@ -1,26 +1,19 @@
 package com.talent_aquisition.services;
 
-import java.util.ArrayList;
-
-import java.util.List;
-
+import com.talent_aquisition.dao.InterviewRepository;
+import com.talent_aquisition.entities.Interview;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-//import com.talent_aquisition.dao.CandidateRepository;
-import com.talent_aquisition.dao.InterviewRepository;
-import com.talent_aquisition.entities.Interview;
-import com.talent_aquisition.services.InterviewServices;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class InterviewServicesImpl implements InterviewServices {
 	
 	@Autowired
 	private InterviewRepository interviewrepository;
-//	
-//	@Autowired
-//	private CandidateRepository candidaterepository;
-//	
+
 	@Override
 	public List<Interview> getinterview(){
 		return (List<Interview>) interviewrepository.findAll();

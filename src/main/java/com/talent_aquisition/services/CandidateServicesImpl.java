@@ -1,22 +1,21 @@
 package com.talent_aquisition.services;
 
-import java.util.ArrayList;
-
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.talent_aquisition.dao.CandidateRepository;
 import com.talent_aquisition.dao.InterviewRepository;
 import com.talent_aquisition.entities.Candidate;
 import com.talent_aquisition.entities.Interview;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class CandidateServicesImpl implements CandidateServices {
 	
 	@Autowired
 	CandidateRepository candidaterepository;
+
 	@Autowired
 	InterviewRepository interviewrepository;
 	

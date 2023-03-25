@@ -1,33 +1,36 @@
 package com.talent_aquisition.entities;
 
-import java.util.Set;
-
-
-import org.springframework.web.bind.annotation.GetMapping;
-
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import java.util.Set;
 
 @Entity
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property="id")
 public class Candidate {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private int id;
 	private String name;
 	private long mobile_number;
 	private String address;
 	private String skills;
 	private String education;
+	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+	@JoinTable(
+			name = "candidate_interview",
+			joinColumns = @JoinColumn(name="candidate_id"),
+			inverseJoinColumns = @JoinColumn(name="interview_id"))
+	private Set<Interview> interview;
 	
 	public Candidate() {
 		super();
@@ -80,27 +83,13 @@ public class Candidate {
 	public void setEducation(String education) {
 		this.education = education;
 	}
-	
-	@Override
-	public String toString() {
-		return "Candidate [id=" + id + ", name=" + name + ", mobile_number=" + mobile_number + ", address=" + address
-				+ ", skills=" + skills + ", education=" + education + "]";
-	}
-	
-//	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
-//	@JoinTable(
-//			name = "Candidate_Interview_Table",
-//			joinColumns = @JoinColumn(name="candidate_id"),
-//			inverseJoinColumns = @JoinColumn(name="interview_id"))
-	
-	private Set<Interview> interview;
-	
 	public Set<Interview> getInterview(){
 		return interview;
 	}
 	public void setInterview(Set<Interview> interview) {
 		this.interview = interview;
 	}
+
 	public Candidate(Set<Interview> interview) {
 		super();
 		this.interview = interview;
@@ -110,4 +99,9 @@ public class Candidate {
 		return interview;
 	}
 
+	@Override
+	public String toString() {
+		return "Candidate [id=" + id + ", name=" + name + ", mobile_number=" + mobile_number + ", address=" + address
+				+ ", skills=" + skills + ", education=" + education + "]";
+	}
 }
