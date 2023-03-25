@@ -1,10 +1,9 @@
-package com.talent_aquisition.services;
+package com.recruitmentagency.talentacquisition.services;
 
-import java.util.List;
-
+import com.recruitmentagency.talentacquisition.entities.Interview;
 import org.springframework.stereotype.Service;
 
-import com.talent_aquisition.entities.Interview;
+import java.util.List;
 
 @Service
 public interface InterviewServices {

@@ -1,7 +1,7 @@
-package com.talent_aquisition.services;
+package com.recruitmentagency.talentacquisition.services;
 
-import com.talent_aquisition.dao.InterviewRepository;
-import com.talent_aquisition.entities.Interview;
+import com.recruitmentagency.talentacquisition.dao.InterviewRepository;
+import com.recruitmentagency.talentacquisition.entities.Interview;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

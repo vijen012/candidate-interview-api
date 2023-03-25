@@ -8,10 +8,10 @@
 		<version>2.7.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.talent_aquisition</groupId>
-	<artifactId>talent_aquisition_project</artifactId>
+	<groupId>com.recruitmentagency</groupId>
+	<artifactId>talent-acquisition</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>talent_aquisition_project</name>
+	<name>talent-acquisition</name>
 	<description> Project for Spring Boot REST API</description>
 	<properties>
 		<java.version>11</java.version>

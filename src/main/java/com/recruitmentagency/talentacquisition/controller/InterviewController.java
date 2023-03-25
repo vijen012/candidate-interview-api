@@ -1,4 +1,4 @@
-package com.talent_aquisition.controller;
+package com.recruitmentagency.talentacquisition.controller;
 
 import java.util.List;
 import java.util.Map;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.talent_aquisition.entities.Interview;
-import com.talent_aquisition.services.InterviewServices;
+import com.recruitmentagency.talentacquisition.entities.Interview;
+import com.recruitmentagency.talentacquisition.services.InterviewServices;
 
 @RestController
 public class InterviewController {

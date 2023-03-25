@@ -1,10 +1,10 @@
-package com.talent_aquisition;
+package com.recruitmentagency;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TalentAquisitionProjectApplicationTests {
+class TalentAcquisitionApplicationTests {
 
 	@Test
 	void contextLoads() {

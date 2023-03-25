@@ -1,5 +1,5 @@
-package com.talent_aquisition.dao;
-import com.talent_aquisition.entities.Interview;
+package com.recruitmentagency.talentacquisition.dao;
+import com.recruitmentagency.talentacquisition.entities.Interview;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

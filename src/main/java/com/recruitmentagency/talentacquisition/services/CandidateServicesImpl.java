@@ -1,9 +1,9 @@
-package com.talent_aquisition.services;
+package com.recruitmentagency.talentacquisition.services;
 
-import com.talent_aquisition.dao.CandidateRepository;
-import com.talent_aquisition.dao.InterviewRepository;
-import com.talent_aquisition.entities.Candidate;
-import com.talent_aquisition.entities.Interview;
+import com.recruitmentagency.talentacquisition.dao.CandidateRepository;
+import com.recruitmentagency.talentacquisition.dao.InterviewRepository;
+import com.recruitmentagency.talentacquisition.entities.Candidate;
+import com.recruitmentagency.talentacquisition.entities.Interview;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -65,7 +65,7 @@ public class CandidateServicesImpl implements CandidateServices {
 		Candidate ce = candidaterepository.findById(cid).get();
 		cname=ce.getName();
 		str.add("Name " + cname);
-		c_mobileno = ce.getMobile_number();
+		c_mobileno = ce.getMobileNumber();
 		str.add("Mobile Number : " + Long.toString(c_mobileno));
 		c_address = ce.getAddress(); 
 		str.add("Education : " + c_education);

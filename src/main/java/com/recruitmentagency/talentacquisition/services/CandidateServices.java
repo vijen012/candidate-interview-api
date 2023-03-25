@@ -1,7 +1,7 @@
-package com.talent_aquisition.services;
+package com.recruitmentagency.talentacquisition.services;
 
-import com.talent_aquisition.entities.Candidate;
-import com.talent_aquisition.entities.Interview;
+import com.recruitmentagency.talentacquisition.entities.Candidate;
+import com.recruitmentagency.talentacquisition.entities.Interview;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

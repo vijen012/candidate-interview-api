@@ -1,10 +1,8 @@
-package com.talent_aquisition.controller;
+package com.recruitmentagency.talentacquisition.controller;
 
-import java.util.List;
-
-import java.util.Map;
-
-
+import com.recruitmentagency.talentacquisition.entities.Candidate;
+import com.recruitmentagency.talentacquisition.entities.Interview;
+import com.recruitmentagency.talentacquisition.services.CandidateServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,9 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.talent_aquisition.entities.Candidate;
-import com.talent_aquisition.entities.Interview;
-import com.talent_aquisition.services.CandidateServices;
+import java.util.List;
+import java.util.Map;
 
 @RestController
 public class CandidateController {

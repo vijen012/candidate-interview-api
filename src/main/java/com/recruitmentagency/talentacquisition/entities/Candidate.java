@@ -1,4 +1,4 @@
-package com.talent_aquisition.entities;
+package com.recruitmentagency.talentacquisition.entities;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -21,7 +21,7 @@ public class Candidate {
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private int id;
 	private String name;
-	private long mobile_number;
+	private long mobileNumber;
 	private String address;
 	private String skills;
 	private String education;
@@ -37,11 +37,11 @@ public class Candidate {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Candidate(int id, String name, long mobile_number, String address, String skills, String education) {
+	public Candidate(int id, String name, long mobileNumber, String address, String skills, String education) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.mobile_number = mobile_number;
+		this.mobileNumber = mobileNumber;
 		this.address = address;
 		this.skills = skills;
 		this.education = education;
@@ -59,11 +59,11 @@ public class Candidate {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public long getMobile_number() {
-		return mobile_number;
+	public long getMobileNumber() {
+		return mobileNumber;
 	}
-	public void setMobile_number(long mobile_number) {
-		this.mobile_number = mobile_number;
+	public void setMobileNumber(long mobileNumber) {
+		this.mobileNumber = mobileNumber;
 	}
 	public String getAddress() {
 		return address;
@@ -101,7 +101,7 @@ public class Candidate {
 
 	@Override
 	public String toString() {
-		return "Candidate [id=" + id + ", name=" + name + ", mobile_number=" + mobile_number + ", address=" + address
+		return "Candidate [id=" + id + ", name=" + name + ", mobileNumber=" + mobileNumber + ", address=" + address
 				+ ", skills=" + skills + ", education=" + education + "]";
 	}
 }
