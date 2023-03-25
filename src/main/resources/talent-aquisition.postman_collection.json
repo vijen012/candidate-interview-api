@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "c2d770ff-ff87-4257-b3cc-7bc8e18a9fb8",
+		"name": "talent-aquisition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1984689"
+	},
+	"item": [
+		{
+			"name": "resume",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/resume",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"resume"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resume",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"David\",\n    \"address\": \"London\",\n    \"skills\": \"GCP\",\n    \"education\": \"B.Tech\",\n    \"mobileNumber\": \"9980454645\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/resume",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"resume"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
